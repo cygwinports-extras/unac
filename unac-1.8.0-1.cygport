@@ -1,0 +1,21 @@
+DESCRIPTION="Removes accents from characters"
+HOMEPAGE="http://www.nongnu.org/unac/"
+SRC_URI="ftp://ftp.debian.org/debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.orig.tar.gz"
+SRC_DIR="${P}.orig"
+
+abi=1
+PKG_NAMES="${PN} lib${PN}${abi} lib${PN}-devel"
+PKG_HINTS="bin lib devel"
+PKG_CONTENTS[0]='usr/bin/*.exe usr/share/doc/ usr/share/man/man1/'
+PKG_CONTENTS[1]="usr/bin/*-${abi}.dll"
+PKG_CONTENTS[2]='usr/include/ usr/lib/ usr/share/man/man3/'
+
+src_compile() {
+	cd ${S}
+	touch config.rpath
+	cygautoreconf
+
+	cd ${B}
+	cygconf
+	cygmake
+}

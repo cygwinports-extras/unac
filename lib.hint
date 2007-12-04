@@ -1,0 +1,14 @@
+category: Text
+requires: cygwin libiconv2
+external-source: unac
+sdesc: "Removes accents from characters (runtime)"
+ldesc: "unac is a C library that removes accents from characters, 
+regardless of the character set (ISO-8859-15, ISO-CELTIC, KOI8-RU...)  
+as long as iconv(3) is able to convert it into UTF-16 (Unicode).  It 
+provides a command line interface (unaccent) that removes accents from 
+an input flow or a string given in argument. When using the library 
+function or the command, the charset of the input must be specified. The 
+input is converted to UTF-16 using iconv(3), accents are removed and the 
+result is converted back to the original charset. The iconv -l command 
+on GNU/Linux will show all charset supported."
+
