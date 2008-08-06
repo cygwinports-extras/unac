@@ -1,4 +1,3 @@
-diff -urN -x configure -x Makefile.in -x autom4te.cache -x ltmain.sh -x depcomp -x install-sh -x 'config.h.in*' -x 'config.*' -x aclocal.m4 -x INSTALL -x missing origsrc/unac-1.8.0.orig/Makefile.am src/unac-1.8.0.orig/Makefile.am
 --- origsrc/unac-1.8.0.orig/Makefile.am	2004-10-16 10:26:11.000000000 -0500
 +++ src/unac-1.8.0.orig/Makefile.am	2007-12-04 13:10:01.325498100 -0600
 @@ -37,14 +37,17 @@
@@ -21,7 +20,6 @@ diff -urN -x configure -x Makefile.in -x autom4te.cache -x ltmain.sh -x depcomp 
  
  #
  # Tests
-diff -urN -x configure -x Makefile.in -x autom4te.cache -x ltmain.sh -x depcomp -x install-sh -x 'config.h.in*' -x 'config.*' -x aclocal.m4 -x INSTALL -x missing origsrc/unac-1.8.0.orig/builder.in src/unac-1.8.0.orig/builder.in
 --- origsrc/unac-1.8.0.orig/builder.in	2004-10-16 10:26:11.000000000 -0500
 +++ src/unac-1.8.0.orig/builder.in	2007-12-04 13:02:53.770926700 -0600
 @@ -260,9 +260,10 @@
@@ -37,7 +35,6 @@ diff -urN -x configure -x Makefile.in -x autom4te.cache -x ltmain.sh -x depcomp 
  
      #
      # First step is to create the content that will be included
-diff -urN -x configure -x Makefile.in -x autom4te.cache -x ltmain.sh -x depcomp -x install-sh -x 'config.h.in*' -x 'config.*' -x aclocal.m4 -x INSTALL -x missing origsrc/unac-1.8.0.orig/configure.ac src/unac-1.8.0.orig/configure.ac
 --- origsrc/unac-1.8.0.orig/configure.ac	2004-10-16 10:26:12.000000000 -0500
 +++ src/unac-1.8.0.orig/configure.ac	2007-12-04 12:46:55.084303000 -0600
 @@ -49,11 +49,6 @@
