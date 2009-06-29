@@ -1,5 +1,5 @@
 category: Text
-requires: cygwin libunac1
+requires: libunac1
 sdesc: "Removes accents from characters (command)"
 ldesc: "unac is a C library that removes accents from characters, 
 regardless of the character set (ISO-8859-15, ISO-CELTIC, KOI8-RU...)  

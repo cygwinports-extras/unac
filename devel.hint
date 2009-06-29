@@ -1,5 +1,5 @@
 category: Text
-requires: cygwin libiconv libunac1
+requires: libiconv libunac1
 external-source: unac
 sdesc: "Removes accents from characters (development)"
 ldesc: "unac is a C library that removes accents from characters, 
