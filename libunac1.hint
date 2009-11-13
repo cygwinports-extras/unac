@@ -1,6 +1,7 @@
 category: Text
-requires: libunac1
-sdesc: "Removes accents from characters (command)"
+requires: libgcc1 libiconv2
+external-source: unac
+sdesc: "Removes accents from characters (runtime)"
 ldesc: "unac is a C library that removes accents from characters, 
 regardless of the character set (ISO-8859-15, ISO-CELTIC, KOI8-RU...)  
 as long as iconv(3) is able to convert it into UTF-16 (Unicode).  It 

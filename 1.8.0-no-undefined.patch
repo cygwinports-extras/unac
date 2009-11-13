@@ -1,0 +1,12 @@
+--- origsrc/unac-1.8.0.orig/Makefile.am	2004-10-16 10:26:11.000000000 -0500
++++ src/unac-1.8.0.orig/Makefile.am	2007-12-04 13:10:01.325498100 -0600
+@@ -37,7 +37,8 @@
+ # Library and headers
+ #
+ lib_LTLIBRARIES = libunac.la
+-libunac_la_LDFLAGS = -version-info $(MAJOR_VERSION):$(MINOR_VERSION):$(MICRO_VERSION)
++libunac_la_LDFLAGS = -version-info $(MAJOR_VERSION):$(MINOR_VERSION):$(MICRO_VERSION) -no-undefined
++libunac_la_LIBADD = $(LTLIBICONV)
+ libunac_la_SOURCES = unac.c
+ 
+ include_HEADERS = \

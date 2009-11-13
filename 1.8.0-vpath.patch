@@ -1,15 +1,6 @@
 --- origsrc/unac-1.8.0.orig/Makefile.am	2004-10-16 10:26:11.000000000 -0500
 +++ src/unac-1.8.0.orig/Makefile.am	2007-12-04 13:10:01.325498100 -0600
-@@ -37,14 +37,17 @@
- # Library and headers
- #
- lib_LTLIBRARIES = libunac.la
--libunac_la_LDFLAGS = -version-info $(MAJOR_VERSION):$(MINOR_VERSION):$(MICRO_VERSION)
-+libunac_la_LDFLAGS = -version-info $(MAJOR_VERSION):$(MINOR_VERSION):$(MICRO_VERSION) -no-undefined
-+libunac_la_LIBADD = $(LTLIBICONV)
- libunac_la_SOURCES = unac.c
- 
- include_HEADERS = \
+@@ -44,7 +44,9 @@
  	unac.h
  
  unac.c: $(UNICODEDATA) builder.in
@@ -35,17 +26,3 @@
  
      #
      # First step is to create the content that will be included
---- origsrc/unac-1.8.0.orig/configure.ac	2004-10-16 10:26:12.000000000 -0500
-+++ src/unac-1.8.0.orig/configure.ac	2007-12-04 12:46:55.084303000 -0600
-@@ -49,11 +49,6 @@
- 
- AM_ICONV
- 
--AC_CHECK_FUNCS(iconv_open,,AC_MSG_ERROR([
--iconv_open not found try to install replacement from
--http://www.gnu.org/software/libiconv/
--ftp://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.9.1.tar.gz]))
--
- AC_CHECK_FUNCS(vsnprintf)
- 
- AC_LIBSOURCES(getopt.c)

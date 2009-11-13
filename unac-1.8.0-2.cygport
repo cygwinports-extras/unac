@@ -1,0 +1,13 @@
+DESCRIPTION="Removes accents from characters"
+HOMEPAGE="http://www.nongnu.org/unac/"
+SRC_URI="ftp://ftp.debian.org/debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.orig.tar.gz"
+SRC_DIR="${P}.orig"
+
+PATCH_URI="1.8.0-no-undefined.patch
+           1.8.0-iconv.patch
+           1.8.0-vpath.patch"
+
+PKG_NAMES="${PN} lib${PN}1 lib${PN}-devel"
+unac_CONTENTS='usr/bin/*.exe usr/share/doc/ usr/share/man/man1/'
+libunac1_CONTENTS="usr/bin/*-1.dll"
+libunac_devel_CONTENTS='usr/include/ usr/lib/ usr/share/man/man3/'
